@@ -1,0 +1,109 @@
+# Superstore Sales Analysis
+
+## Overview
+
+This project analyzes Superstore sales data using Python.
+
+The dataset contains sales, customer, product, order, shipping, quantity, discount, and profit information.
+
+## Dataset
+
+* Records: 10,194
+* Columns: 21
+* Dataset type: Superstore Sales Data
+
+The dataset includes columns such as:
+
+* Order ID
+* Order Date
+* Ship Date
+* Ship Mode
+* Customer Name
+* Segment
+* City
+* Region
+* Product ID
+* Category
+* Sub-Category
+* Product Name
+* Sales
+* Quantity
+* Discount
+* Profit
+
+## Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Google Colab
+
+## Data Preprocessing
+
+The project performs the following steps:
+
+1. Load the CSV file.
+2. Check the dataset using `head()` and `info()`.
+3. Generate basic statistics using `describe()`.
+4. Convert Order Date and Ship Date into date format.
+5. Calculate Delivery Days.
+
+```python
+df['Order Date'] = pd.to_datetime(df['Order Date'])
+df['Ship Date'] = pd.to_datetime(df['Ship Date'])
+
+df['Delivery Days'] = (
+    df['Ship Date'] - df['Order Date']
+).dt.days
+```
+
+The project adds **Delivery Days** as a new column.
+
+## Analysis
+
+The project analyzes:
+
+* Sales
+* Quantity
+* Discount
+* Profit
+* Delivery Days
+* Product Category
+* Customer information
+* Shipping information
+
+## Statistical Analysis
+
+The dataset contains numerical columns such as:
+
+* Sales
+* Quantity
+* Discount
+* Profit
+
+Basic statistical measures such as mean, minimum, maximum, and standard deviation are calculated using `df.describe()`.
+
+## Visualization
+
+Matplotlib and Seaborn are used to create charts and visualize the data.
+
+## Result
+
+The project helps to understand:
+
+* Sales performance
+* Product information
+* Customer information
+* Profit
+* Discounts
+* Delivery time
+
+## Conclusion
+
+This project shows how Python can be used to **load, clean, analyze, and visualize Superstore sales data**.
+
+## Author
+
+**Subashini**
