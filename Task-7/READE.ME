@@ -1,0 +1,121 @@
+# Healthcare Dataset – Data Cleaning and Statistical Analysis
+
+## Overview
+
+This project performs **data exploration, categorical data cleaning, and statistical analysis** on a healthcare dataset using Python and Pandas.
+
+## Dataset
+
+Dataset used:
+
+`healthcare_dataset (2).csv`
+
+The dataset contains healthcare information such as:
+
+* Gender
+* Blood Type
+* Medical Condition
+* Insurance Provider
+* Admission Type
+* Medication
+* Test Results
+* Age
+* Billing Amount
+* Room Number
+
+## Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Google Colab / Jupyter Notebook
+
+## Objectives
+
+* Load the healthcare dataset.
+* Explore the dataset structure.
+* Check for missing values.
+* Find the number of rows and columns.
+* Check column names and data types.
+* Clean categorical features.
+* Calculate statistical measures for numerical columns.
+
+## Data Exploration
+
+The following functions are used to understand the dataset:
+
+```python
+df.head()
+df.isnull().sum()
+df.shape
+df.columns
+df.dtypes
+df.info()
+```
+
+These functions help to understand the dataset, missing values, columns, dimensions, and data types.
+
+## Categorical Data Cleaning
+
+The following categorical features are cleaned:
+
+* Gender
+* Blood Type
+* Medical Condition
+* Insurance Provider
+* Admission Type
+* Medication
+* Test Results
+
+Whitespace is removed from these columns using:
+
+```python
+for col in categorical_features:
+    df[col] = df[col].str.strip()
+```
+
+## Statistical Analysis
+
+Statistical measures are calculated for the following numerical columns:
+
+* Age
+* Billing Amount
+* Room Number
+
+The project calculates:
+
+* Mean
+* Median
+* Standard Deviation
+* Q1 (25th percentile)
+* Q2 (50th percentile)
+* Q3 (75th percentile)
+
+Example:
+
+```python
+print("Mean:", df[column].mean())
+print("Median:", df[column].median())
+print("Standard Deviation:", df[column].std())
+print("Q1:", df[column].quantile(0.25))
+print("Q2:", df[column].quantile(0.50))
+print("Q3:", df[column].quantile(0.75))
+```
+
+## Project Highlights
+
+* Healthcare dataset loading
+* Dataset exploration
+* Missing value checking
+* Data type checking
+* Categorical feature cleaning
+* Numerical feature analysis
+* Mean and median calculation
+* Standard deviation calculation
+* Quartile analysis
+
+## Conclusion
+
+This project demonstrates how **Pandas and NumPy** can be used to explore and clean healthcare data and calculate important statistical measures for numerical features.
+
+
