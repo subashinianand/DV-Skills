@@ -1,0 +1,87 @@
+# AAPL Stock Data Analysis
+
+## Overview
+
+This project analyzes Apple (AAPL) stock market data using Python.
+
+The project studies stock prices, trading volume, and daily returns.
+
+## Dataset
+
+The dataset contains **10,409 rows and 7 columns**.
+
+### Columns
+
+* Date
+* Open
+* High
+* Low
+* Close
+* Adj Close
+* Volume
+
+## Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Google Colab
+
+## Data Preprocessing
+
+The project performs:
+
+1. Load the AAPL CSV file.
+2. Display the first records.
+3. Check dataset information.
+4. Check dataset shape.
+5. Check missing values.
+6. Check duplicate values.
+7. Calculate mean Open and Close prices.
+
+The file shows no missing values in the displayed null-value check.
+
+## Analysis
+
+The project analyzes:
+
+* Opening Price
+* Highest Price
+* Lowest Price
+* Closing Price
+* Adjusted Closing Price
+* Trading Volume
+* Daily Return
+
+## Daily Return
+
+A new column called `Daily_return` is created using:
+
+```python
+df["Daily_return"] = ((df["Close"] - df["Open"]) / df["Open"]) * 100
+```
+
+This calculates the percentage change between the opening and closing price for each day.
+
+## Mean Price
+
+The project calculates the average:
+
+* Open price: **13.9599**
+* Close price: **13.9668**
+
+## Result
+
+The project helps to understand:
+
+* AAPL stock prices
+* Daily price changes
+* Trading volume
+* Opening and closing prices
+* Daily returns
+
+## Conclusion
+
+This project demonstrates how Python and Pandas can be used to load, check, analyze, and calculate daily returns from AAPL stock data.
+
