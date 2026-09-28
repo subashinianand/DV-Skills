@@ -1,0 +1,138 @@
+# Healthcare Data Analysis
+
+## Overview
+
+This project analyzes a healthcare dataset using **Python, Pandas, Matplotlib, and Seaborn**.
+
+The analysis focuses on medical conditions, insurance providers, billing amounts, patient admissions, and hospital stay duration.
+
+## Dataset
+
+Dataset used:
+
+`healthcare_dataset (1).csv`
+
+The dataset contains information such as:
+
+* Age
+* Medical Condition
+* Insurance Provider
+* Billing Amount
+* Date of Admission
+* Discharge Date
+
+## Technologies Used
+
+* Python
+* Pandas
+* Matplotlib
+* Seaborn
+* Google Colab
+
+## Objectives
+
+* Load and explore the healthcare dataset.
+* Check missing values.
+* Find the dataset size and basic statistics.
+* Calculate total billing amounts.
+* Calculate hospital stay duration.
+* Analyze billing amounts by medical condition and insurance provider.
+* Analyze monthly patient admissions.
+* Study correlations between age, stay duration, and billing amount.
+
+## Data Analysis
+
+### 1. Load Dataset
+
+```python
+df = pd.read_csv('/content/healthcare_dataset (1).csv')
+```
+
+### 2. Dataset Exploration
+
+```python
+df.head()
+df.isnull().sum()
+df.shape
+df.describe()
+```
+
+### 3. Billing Analysis
+
+The total billing amount is calculated based on:
+
+* Medical Condition
+* Insurance Provider
+
+```python
+billing = df.groupby(
+    ["Medical Condition", "Insurance Provider"]
+)["Billing Amount"].sum()
+```
+
+### 4. Stay Duration
+
+Hospital stay duration is calculated using the admission and discharge dates.
+
+```python
+df["stay Duration"] = (
+    df["Discharge Date"] - df["Date of Admission"]
+).dt.days
+```
+
+## Visualizations
+
+The project contains the following visualizations:
+
+### Average Billing Amount
+
+A stacked bar chart shows the average billing amount for different medical conditions and insurance providers.
+
+### Billing Distribution by Medical Condition
+
+A violin plot shows the distribution of billing amounts for each medical condition.
+
+### Billing Distribution by Insurance Provider
+
+A violin plot shows the distribution of billing amounts for different insurance providers.
+
+### Monthly Patient Admissions
+
+A line chart shows the number of patient admissions for each month.
+
+### Correlation Matrix
+
+A heatmap shows the correlation between:
+
+* Age
+* Stay Duration
+* Billing Amount
+
+## Project Highlights
+
+* Healthcare dataset exploration
+* Missing value checking
+* Descriptive statistics
+* Billing analysis
+* Hospital stay duration calculation
+* Medical condition analysis
+* Insurance provider analysis
+* Monthly admission analysis
+* Data visualization
+* Correlation analysis
+
+## Results
+
+The project helps to understand:
+
+* Billing patterns across medical conditions.
+* Billing differences between insurance providers.
+* Distribution of healthcare billing amounts.
+* Monthly patient admission patterns.
+* Relationship between age, hospital stay duration, and billing amount.
+
+## Conclusion
+
+This project demonstrates how **Python data analysis and visualization tools** can be used to understand healthcare data. Pandas is used
+for data processing and grouping, while Matplotlib and Seaborn are used to create meaningful visualizations.
+
