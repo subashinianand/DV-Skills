@@ -1,0 +1,115 @@
+# Apple Stock Data Analysis
+
+## Overview
+
+This project analyzes **Apple (AAPL) stock market data** using Python.
+
+The project studies stock prices and trading volume over time and uses charts to understand price trends.
+
+## Dataset
+
+The dataset contains Apple stock information with the following columns:
+
+* Date
+* Open
+* High
+* Low
+* Close
+* Adj Close
+* Volume
+
+The dataset contains **10,409 records**, covering dates from **1980-12-12 to 2022-03-24**.
+
+## Objectives
+
+* Analyze Apple stock prices over time
+* Understand Open, High, Low, and Close prices
+* Analyze trading volume
+* Calculate 20-day moving average
+* Calculate 50-day moving average
+* Visualize stock price trends
+
+## Technologies Used
+
+* Python
+* Pandas
+* Matplotlib
+* Seaborn
+* Google Colab
+
+## Data Preprocessing
+
+The following preprocessing steps are performed:
+
+1. Import the required Python libraries.
+2. Load the AAPL CSV dataset.
+3. Convert the `Date` column into datetime format.
+4. Sort the data according to the date.
+5. Create moving-average columns.
+
+## Data Analysis
+
+### 1. OHLC Price Analysis
+
+The project plots:
+
+* Open Price
+* High Price
+* Low Price
+* Close Price
+
+This helps understand how Apple's stock price changed over time.
+
+### 2. Trading Volume
+
+A line chart is used to visualize the trading volume over time.
+
+### 3. Closing Price
+
+The daily closing price is plotted to understand the overall price trend.
+
+### 4. Moving Average
+
+Two moving averages are calculated:
+
+* **20-Day Moving Average (MA20)** – used to observe short-term trends.
+* **50-Day Moving Average (MA50)** – used to observe long-term trends.
+
+```python
+df["MA20"] = df["Close"].rolling(window=20).mean()
+df["MA50"] = df["Close"].rolling(window=50).mean()
+```
+
+## Visualizations
+
+The project includes:
+
+* OHLC Price Chart
+* Trading Volume Chart
+* Closing Price Trend
+* 20-Day Moving Average
+* 50-Day Moving Average
+* Closing Price with Both Moving Averages
+
+## Results
+
+The visualizations help identify:
+
+* Changes in Apple stock prices
+* Trading activity over time
+* Short-term price trends
+* Long-term price trends
+* Relationship between closing price and moving averages
+
+## Conclusion
+
+This project provides a basic analysis of Apple stock data using Python. Pandas is used for data processing, while Matplotlib is used to create visualizations and understand stock price trends.
+
+## Future Improvements
+
+* Add stock price prediction using Machine Learning
+* Analyze daily returns
+* Add candlestick charts
+* Perform correlation analysis
+* Compare AAPL with other technology stocks
+* Create an interactive dashboard
