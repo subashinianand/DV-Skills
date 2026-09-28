@@ -1,0 +1,134 @@
+# Healthcare Dataset Analysis
+
+## Overview
+
+This project analyzes healthcare patient data using Python and Pandas.
+It focuses on patient details, medical conditions, admission types, billing amounts, and hospital stay duration.
+
+## Dataset
+
+The dataset contains **500 patient records** and **9 columns**.
+
+### Columns
+
+* Patient_ID
+* Gender
+* Age
+* Medical_Condition
+* Admission_Date
+* Admission_Type
+* Medical_Code
+* Billing_Amount
+* Discharge_Date
+
+## Objectives
+
+* Analyze patient information
+* Check missing values
+* Clean date and categorical data
+* Calculate hospital stay duration
+* Analyze billing amounts
+* Calculate basic statistical measures
+* Understand healthcare data using Python
+
+## Technologies Used
+
+* Python
+* Pandas
+* Matplotlib
+* Seaborn
+* Google Colab
+
+## Data Preprocessing
+
+The following preprocessing steps were performed:
+
+1. Imported Python libraries.
+2. Loaded the healthcare CSV dataset.
+3. Checked the first few records.
+4. Checked column names and dataset shape.
+5. Checked missing values.
+6. Converted discharge and admission dates into datetime format.
+7. Converted admission type into lowercase.
+8. Calculated hospital stay duration.
+
+## Missing Values
+
+The dataset contains **15 missing values** in the `Medical_Code` column.
+
+All other columns have no missing values.
+
+## Statistical Analysis
+
+Basic statistical measures were calculated using `describe()`.
+
+### Age
+
+* Mean: **50.106 years**
+* Minimum: **22 years**
+* Maximum: **78 years**
+* Median: **50 years**
+
+### Billing Amount
+
+* Mean: **7249.001**
+* Minimum: **2300**
+* Maximum: **14200**
+* Median: **6950**
+
+## Hospital Stay
+
+Hospital stay duration was calculated using:
+
+```python
+df["Hospital_Stay_Dates"] = (
+    df["Discharge_Data"] - df["Admission_Data"]
+).dt.days
+```
+
+Example results:
+
+* Patient 1: 5 days
+* Patient 2: 6 days
+* Patient 3: 2 days
+* Patient 4: 2 days
+* Patient 5: 8 days
+
+## Data Analysis
+
+The project analyzes:
+
+* Patient age
+* Gender
+* Medical conditions
+* Admission types
+* Medical codes
+* Billing amounts
+* Admission dates
+* Discharge dates
+* Hospital stay duration
+
+## Results
+
+The analysis provides information about:
+
+* Patient demographics
+* Different medical conditions
+* Missing medical codes
+* Admission patterns
+* Billing amount distribution
+* Hospital stay duration
+* Basic statistical measures
+
+## Conclusion
+
+This project demonstrates how Python and Pandas can be used to clean, process, and analyze healthcare data. It provides basic information about patients, medical conditions, hospital stays, and billing amounts.
+
+## Future Improvements
+
+* Create more healthcare visualizations
+* Analyze medical conditions by gender
+* Analyze billing amount by medical condition
+* Study admission type patterns
+* Build a healthcare dashboard
+* Apply machine learning for prediction
