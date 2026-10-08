@@ -1,0 +1,118 @@
+# Student Performance Analysis
+
+## Overview
+
+This project analyzes student performance data using Python. The analysis focuses on **math, reading, and writing scores** 
+and studies how factors such as **parental level of education, lunch type, and test preparation course** are related to student performance.
+
+## Dataset
+
+The project uses a preprocessed student performance dataset:
+
+`studentperformance_preprocessed.csv`
+
+### Important Columns
+
+* Parental level of education
+* Lunch
+* Test preparation course
+* Math score
+* Reading score
+* Writing score
+
+## Objectives
+
+* Analyze student academic performance.
+* Study the relationship between parental education and math scores.
+* Compare math scores based on lunch type.
+* Analyze the effect of test preparation courses.
+* Find the correlation between math, reading, and writing scores.
+* Visualize the results using charts.
+
+## Technologies Used
+
+* Python
+* Pandas
+* Matplotlib
+* Seaborn
+* Google Colab
+
+## Data Loading
+
+The dataset is loaded using Pandas.
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+df = pd.read_csv("/content/drive/MyDrive/Colab Notebooks/studentperformance_preprocessed.csv")
+```
+
+## Data Exploration
+
+The first few rows and the shape of the dataset are displayed.
+
+```python
+print(df.head())
+print(df.shape)
+```
+
+## Data Visualization
+
+### 1. Parental Education and Math Score
+
+A bar chart is used to analyze the average math score based on parental education level and lunch type.
+
+**Chart:** Average Math Score by Parental Education and Lunch Type
+
+### 2. Test Preparation and Math Score
+
+A box plot is used to compare math scores between students who completed a test preparation course and those who did not.
+
+**Chart:** Math Score Based on Test Preparation
+
+### 3. Correlation Heatmap
+
+A heatmap is used to show the correlation between:
+
+* Math Score
+* Reading Score
+* Writing Score
+
+```python
+corr = df[['math score', 'reading score', 'writing score']].corr()
+
+sns.heatmap(corr, annot=True, cmap='coolwarm')
+```
+
+## Analysis
+
+The project provides visual insights into student performance and helps understand the relationship between academic scores 
+and different student-related factors.
+
+## Results
+
+The analysis generates:
+
+* Bar chart for parental education and math score.
+* Box plot for test preparation and math score.
+* Correlation heatmap for math, reading, and writing scores.
+* Correlation values between the three academic scores.
+
+## Project Structure
+
+```text
+Student-Performance-Analysis/
+│
+├── studentperformance_preprocessed.csv
+├── Untitled36 (2).ipynb
+└── README.md
+```
+
+## Conclusion
+
+This project demonstrates how Python can be used to analyze and visualize student performance data. The charts and correlation analysis
+help identify patterns between different factors and students' academic scores.
+
+
