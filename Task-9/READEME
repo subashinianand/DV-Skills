@@ -1,0 +1,50 @@
+# House Price Data Analysis
+
+## 1. Overview
+This project analyzes house prices using Python.
+
+## 2. Dataset
+The dataset is `kc_house_data.csv`.
+
+It contains house prices and property details.
+
+## 3. Objectives
+- Analyze house prices.
+- Clean the dataset.
+- Find missing values.
+- Study house features.
+- Identify price outliers.
+
+## 4. Data Preprocessing
+- Load the dataset.
+- Check missing values.
+- Remove duplicate records.
+- Clean invalid data.
+- Convert date columns.
+
+## 5. Data Analysis
+- Find average house prices.
+- Analyze bedrooms and bathrooms.
+- Study house living area.
+- Calculate property age.
+- Check price outliers.
+
+## 6. Visualization
+- Use histograms to show price distribution.
+- Use boxplots to identify outliers.
+- Display data using charts.
+
+## 7. Tools Used
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Google Colab
+
+## 8. Result
+The project helps us understand house prices and property features.
+
+## 9. Future Improvement
+We can build a machine learning model to predict house prices.
+
